@@ -1,0 +1,110 @@
+@use '../utils/variables' as *;
+
+.dev__modal--close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  text-decoration: none;
+  border: none;
+  background: none;
+  transition-property: fill border-color;
+  padding: 0;
+}
+
+.headerr__icon {
+  fill: transparent;
+  stroke: gray;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+}
+
+.dev__icon {
+  stroke: $white-text;
+  &:hover,
+  &:focus {
+    stroke: #ff6b08;
+  }
+}
+
+.dev__modal {
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 24px;
+  background-color: $pagination-btn-bgc;
+  transform: translate(-50%, -50%);
+  max-width: 840px;
+  height: 100%;
+  max-height: 558px;
+  background-image: url(../images/cinema.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dev__title {
+  color: $orange-text;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #ccc, 1px -1px 1px #ccc, -1px 1px 1px #ccc,
+    -1px -1px 1px #ccc;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 44px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  &:hover,
+  &:focus {
+    color: $error-text;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.dev__box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 278px;
+  gap: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 490px;
+    gap: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 790px;
+  }
+}
+
+.dev__me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px 16px;
+  width: 190px;
+}
+
+.me__photo {
+  border-radius: 8px;
+  border: 2px solid $error-text;
+}
+
+.my__social {
+  fill: black;
+  &:hover,
+  &:focus {
+    fill: $error-text;
+    transition-duration: 0.5s;
+    transform: scale(1.05);
+  }
+}

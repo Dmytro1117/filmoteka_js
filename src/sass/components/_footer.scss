@@ -1,0 +1,71 @@
+
+@use '../utils/variables' as *;
+.footer {
+  text-align: center;
+  background-color: $footer-bgc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__sub {
+  color: #545454;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    margin-left: 8px;
+  }
+  .dark-theme & {
+    color: white;
+  }
+}
+
+.footer__text {
+  font-size: 12px;
+  color: #545454;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.3em;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  .dark-theme & {
+    color: white;
+  }
+}
+
+.footer__icon {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: block;
+}
+
+.footer__link {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: #ff6b08;
+  }
+}

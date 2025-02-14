@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka</title>
+    <link rel="icon" type="image/svg+xml" href="../public/favicon.png" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__section">
+        <nav class="site-nav">
+          <a href="./index.html" class="header__logo">
+            <svg
+              class="header__icon logo animate__animated animate__flip animate__slower animate__infinite"
+              width="24"
+              height="24"
+            >
+              <use href="/images/sprite.svg#header-logo"></use>
+            </svg>
+            <span class="header__logo-text">Filmoteka</span>
+          </a>
+
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a
+                href="./index.html"
+                class="header__list-link header__list-link--accent"
+                >HOME</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a href="./library.html" class="header__list-link">
+                MY LIBRARY
+              </a>
+            </li>
+            <li class="header__list-item">
+              <a href="./index.html" class="header__list-link auth-btn">
+                <svg
+                  class="header__icon icon-autorization"
+                  width="24"
+                  height="24"
+                >
+                  <use href="/images/sprite.svg#icon-autorization"></use>
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  class="header__icon icon-autorization-checked"
+                >
+                  <use href="/images/sprite.svg#icon-sign-out"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <form action="submit" class="header__form">
+          <div class="header__form-search">
+            <input
+              type="text"
+              name="serch_film"
+              autofocus
+              placeholder="Movie search"
+              class="header__form-input js-input"
+            />
+            <button type="submit" class="header__search">
+              <svg class="header__form-icon" width="12" height="12">
+                <use href="/images/sprite.svg#header-search"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="theme-wrapper">
+          <form class="js-theme-form">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </form>
+          <span class="js-theme-name">Light</span>
+        </div>
+
+        <p class="js-userStatus userStatus"></p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2
+          class="swiper-title animate__animated animate__infinite animate__pulse"
+        >
+          Watch trailer
+        </h2>
+        <div class="swiper">
+          <ul class="swiper-wrapper"></ul>
+          <div class="swiper-button-prev">
+            <svg class="swiper-button-prev-icon">
+              <use href="./images/sprite.svg#icon-circle-left"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg class="swiper-button-next-icon">
+              <use href="./images/sprite.svg#icon-circle-right"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <section class="films-section">
+          <h2 class="visually-hidden">Films</h2>
+          <ul class="film-list js-main-film-list"></ul>
+          <div class="pagination_box"></div>
+        </section>
+      </div>
+      <button class="up-btn">
+        <svg class="up-btn-images">
+          <use href="./images/sprite.svg#up"></use>
+        </svg>
+      </button>
+      <div class="backdrop backdrop__is-hidden js-page-loader">
+        <div class="loader is-active" id="js-page-loader">🎬</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__text">&#169; 2025 | All Rights Reserved |</p>
+        <div class="footer__sub">
+          Developed
+          <img
+            class="footer__icon animate__animated animate__infinite animate__heartBeat animate__slower"
+            src="images/footer_icon.png"
+            alt="footer_icon"
+            width="14"
+            height="14"
+          />
+          <p class="footer__link open-modal-developer">by Moiseienko Dmytro</p>
+        </div>
+      </div>
+    </footer>
+    <div class="backdrop__modal-card" data-backdrop></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

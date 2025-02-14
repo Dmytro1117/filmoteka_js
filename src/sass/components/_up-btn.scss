@@ -1,0 +1,35 @@
+
+@use '../utils/variables' as *;
+.up-btn {
+  position: fixed;
+  top: 80%;
+  right: 20px;
+  color: #545454;
+  background-color: transparent;
+  opacity: 1;
+  transition: all 0.4s;
+  border-width: 0px;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: transform 250ms, opacity 750ms linear;
+  padding: 0px;
+}
+.up-btn:hover {
+  transform: scale(1.1);
+  color: #ff6b08;
+  cursor: pointer;
+}
+.up-btn-images {
+  height: 100%;
+  width: 100%;
+}
+
+.visible {
+  display: block;
+  z-index: 100;
+  opacity: 1;
+}

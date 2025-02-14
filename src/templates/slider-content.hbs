@@ -1,0 +1,14 @@
+{{#each this}}
+  <li class='swiper-slide'>
+    <a class='swiper-link' href='#' data-id='${{id}}'><img
+        src='https://image.tmdb.org/t/p/w500/${{poster_path}}'
+        alt='${{title}}'
+      />
+      <div class='swiper-backdrop'>
+        <svg class='icon-play'>
+          <use href='${{sprite}}#icon-play'></use>
+        </svg>
+      </div>
+    </a>
+  </li>
+{{/each}}
